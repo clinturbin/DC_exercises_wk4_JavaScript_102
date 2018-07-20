@@ -16,6 +16,6 @@ var positiveNumbers = function (numbers) {
     return positives;
 };
 
-numbers = [-1, -2, -3];
+var numbers = [-1, -2, -3];
 
 console.log (positiveNumbers(numbers));

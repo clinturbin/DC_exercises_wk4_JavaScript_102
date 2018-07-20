@@ -6,11 +6,12 @@
 //    CAESAR CIPHER
 //---------------------------
 
-var lowerLetters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+var lowerLetters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", 
+                    "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 
 var cipher = function (message, offset) {
     var lowerMessage = message.toLowerCase();
-    var newString = '';
+    var caesarString = '';
     var caesarIndex;
     for (var i = 0; i < lowerMessage.length; i++) {
         if (lowerLetters.includes(lowerMessage[i])) {
@@ -18,18 +19,20 @@ var cipher = function (message, offset) {
                 if (lowerMessage[i] === lowerLetters[j]) {
                     if (j + offset >= lowerLetters.length) {
                         caesarIndex = j - offset;
-                    } else {
+                    }
+                    else {
                         caesarIndex = j + offset;
                     }
-                    newString += lowerLetters[caesarIndex];
+                    caesarString += lowerLetters[caesarIndex];
                 }
             }
-        } else {
-            newString += lowerMessage[i];
+        } 
+        else {
+            caesarString += lowerMessage[i];
         }
     }
-    return newString;
-}
+    return caesarString;
+};
 
 var message = 'Genius without education is like silver in the mine';
 var offset = 13;
@@ -41,11 +44,12 @@ console.log(cipher(message, offset));
 //    CAESAR CIPHER 2
 //---------------------------
 
-// var lowerLetters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+// var lowerLetters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", 
+//                     "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 
 // var cipher = function (message, offset) {
 //     var lowerMessage = message.toLowerCase();
-//     var newString = '';
+//     var reverseCaesarString = '';
 //     var caesarIndex;
 //     for (var i = 0; i < lowerMessage.length; i++) {
 //         if (lowerLetters.includes(lowerMessage[i])) {
@@ -53,18 +57,20 @@ console.log(cipher(message, offset));
 //                 if (lowerMessage[i] === lowerLetters[j]) {
 //                     if (j - offset < 0) {
 //                         caesarIndex = j + offset;
-//                     } else {
+//                     } 
+//                     else {
 //                         caesarIndex = j - offset;
 //                     }
-//                     newString += lowerLetters[caesarIndex];
+//                     reverseCaesarString += lowerLetters[caesarIndex];
 //                 }
 //             }
-//         } else {
-//             newString += lowerMessage[i];
+//         } 
+//         else {
+//             reverseCaesarString += lowerMessage[i];
 //         }
 //     }
-//     return newString;
-// }
+//     return reverseCaesarString;
+// };
 
 // var message = 'Travhf jvgubhg rqhpngvba vf yvxr fvyire va gur zvar';
 // var offset = 13;

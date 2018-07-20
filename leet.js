@@ -18,11 +18,12 @@ var leet = {
 
 var leetspeak = function (message) {
     var upperMessage = message.toUpperCase();
-    newString = '';
+    var newString = '';
     for (var i = 0; i < message.length; i++) {
         if (upperMessage[i] in leet) {
             newString += leet[upperMessage[i]] 
-        } else {
+        }
+        else {
             newString += upperMessage[i];
         }
     }

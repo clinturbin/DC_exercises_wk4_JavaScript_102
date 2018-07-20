@@ -4,11 +4,12 @@
 
 var printBox = function (width, height) {
     for (var i = 0; i < height; i++) {
-        str = '';
+        var str = '';
         for (var j = 0; j < width; j++) {
             if (i === 0 || i === height - 1 || j === 0 || j === width - 1) {
                 str += '*';
-            } else {
+            } 
+            else {
                 str += ' ';
             }
         }

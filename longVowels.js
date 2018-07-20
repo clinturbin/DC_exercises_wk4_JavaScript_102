@@ -17,7 +17,8 @@ var longLongVowels = function (message, vowelLength) {
                 newMessage += lowerMessage[i];
             }
             i++;
-        } else {
+        }
+        else {
             newMessage += lowerMessage[i];
         }
     }

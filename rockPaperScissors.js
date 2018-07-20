@@ -22,11 +22,13 @@ var rockPaperScissors = function (player1Choice, player2Choice) {
     console.log(`Player 2: ${player2Choice}.`);
     if (player1Choice === player2Choice) {
         console.log('Tie Game');
-    } else if ((playerChoice === 'Rock' && player2Choice === 'Scissors') ||
-            (player1Choice === 'Scissors' && player2Choice === 'Paper') ||
-            (player1Choice == 'Paper' && player2Choice === 'Rock')) {
-                console.log('Player 1 Wins!');
-    } else {
+    }
+    else if ((playerChoice === 'Rock' && player2Choice === 'Scissors') ||
+               (player1Choice === 'Scissors' && player2Choice === 'Paper') ||
+               (player1Choice === 'Paper' && player2Choice === 'Rock')) {
+        console.log('Player 1 Wins!');
+    }
+    else {
         console.log('PLayer 2 wins!');
     }
 };
